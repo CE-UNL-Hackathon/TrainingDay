@@ -16,7 +16,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1.4.6
         with:
-          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUB_ID }}"}'
+          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUB_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
       - name: Deploy Azure Resource Manager (ARM) Template
         uses: Azure/arm-deploy@v1.0.8
         with:
