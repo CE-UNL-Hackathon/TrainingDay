@@ -17,6 +17,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Explore-GitHub-Actions-2:
+    needs: Explore-GitHub-Actions
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was Manually triggered by a ${{ github.event_name }} event."
@@ -30,4 +31,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  
+
