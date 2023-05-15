@@ -1,0 +1,26 @@
+name: Deploy Demo
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  deploy-to-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    env:
+      AZURE_CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+      - name: Azure Login
+        uses: azure/login@v1.4.6
+        with:
+          creds: '{"clientid":"${{ secret.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secret.SUB_ID }}"}'
+      - name: Deploy Azure Resource Manager (ARM) Template
+        uses: Azure/arm-deploy@v1.0.8
+        with:
+          scope: resourcegroup
+          resourceGroupName: "dmlia-az-rg"
+          template: "ARM-Templates/container-webapp-template.json"
+          deploymentMode: Incremental          
