@@ -12,7 +12,7 @@ jobs:
       AZURE_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Azure Login
         uses: azure/login@v1.4.6
         with:
