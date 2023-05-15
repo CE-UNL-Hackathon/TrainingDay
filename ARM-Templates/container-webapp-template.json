@@ -3,11 +3,11 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "dmlia-devops-dev",
+            "defaultValue": "dmliadevops-dev",
             "type": "String"
         },
         "hostingPlanName": {
-            "defaultValue": "dmlia-devops-asp",
+            "defaultValue": "dmliadevops-asp",
             "type": "String"
         },
         "appInsightsLocation": {
@@ -15,7 +15,7 @@
             "type": "String"
         },
         "appInsightsName": {
-            "defaultValue": "dmlia-devops-ai",
+            "defaultValue": "dmliadevops-ai",
             "type": "String"
         },        
         "sku": {
@@ -23,11 +23,11 @@
             "type": "String"
         },
         "registryName": {
-            "defaultValue": "dmlia-devopsreg",
+            "defaultValue": "dmliadevopsreg",
             "type": "String"
         },
         "imageName": {
-            "defaultValue": "dmlia-devopsimage",
+            "defaultValue": "dmliadevopsimage",
             "type":"String"
         },
         "registryLocation": {
